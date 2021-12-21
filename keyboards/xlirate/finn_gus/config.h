@@ -31,7 +31,7 @@ please replace this if you modify the code
 /* Change these if you modify the code */
 
 #define DEVICE_VER      0xFFFD
-#define MANUFACTURER    Griffin Barrett
+#define MANUFACTURER    Pikatea and Griffin Barrett
 #define PRODUCT         funn_gus_prototype
 
 /* key matrix size */
@@ -42,23 +42,23 @@ please replace this if you modify the code
 #define DEBOUNCE 4
 
 
-#define MATRIX_ROW_PINS { B3, B2, B6 }
+#define MATRIX_ROW_PINS { B1, B3, B2 }
 #define MATRIX_ROW_PIN_COUNT 3
 /* It is arbitrary, but we use a grey code to limit transitions in the external chip.
 Only one bit changes per row change, so there should be no timing related digital glitching */
-#define MATRIX_ROW_MASKS { 4, 6, 7, 5, 1, 3, 2, 0 }
+#define MATRIX_ROW_MASKS { 4, 0, 2, 3, 1, 5, 7, 6 }
 /*  Row num : bit mask : CD4051B pin grounded
  *  0 : 100 : 4
- *  1 : 110 : 6
- *  2 : 111 : 7
- *  3 : 101 : 5
+ *  1 : 000 : 0
+ *  2 : 010 : 2
+ *  3 : 011 : 3
  *  4 : 001 : 1
- *  5 : 011 : 3
- *  6 : 010 : 2
- *  7 : 000 : 0
+ *  5 : 101 : 5
+ *  6 : 111 : 7
+ *  7 : 110 : 6
  */
 
-#define MATRIX_COL_PINS { D3, D2, D7, E6, F6, B1, F7, B4, B5 }
+#define MATRIX_COL_PINS { D3, D2, D7, E6, F6, B6, F7, B4, B5 }
 
 #define MATRIX_IO_DELAY 15
 
